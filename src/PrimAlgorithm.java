@@ -16,8 +16,8 @@ class Edge {
 }
 
 // create a vertex that collects the minimum weight key
-// one that stores which vertex were talking about and
-// the current minumum minimum weight to connect that vertex to the MST (D[v]
+// one that stores which vertex we're talking about and
+// the current minumum weight to connect that vertex to the MST (D[v]
 // value)
 class pQEntry implements Comparable<pQEntry> {
     int vertex;
@@ -53,7 +53,7 @@ class Graph {
     // weight
     // allow that collector to be able to be called on in the imp class
     public void addEdge(int startVertex, int connectedVertex, int weight) {
-        edgeList.get(connectedVertex).add(new Edge(startVertex, connectedVertex, weight));
+        edgeList.get(startVertex).add(new Edge(startVertex, connectedVertex, weight));
         edgeList.get(connectedVertex).add(new Edge(connectedVertex, startVertex, weight));
     }
 

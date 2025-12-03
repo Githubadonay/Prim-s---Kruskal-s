@@ -1,5 +1,6 @@
 import java.util.List;
 
+
 public class Imp {
     public static void main(String[] args) {
         //Create a graph with 5 vertices
@@ -19,5 +20,20 @@ public class Imp {
 
         // Print the MST
         graph.printMST(mst);
+
+        System.out.println("\n Kruskal's Algorithm:\n");
+
+        KruskalGraph kruskalGraph = new KruskalGraph(6);
+
+        kruskalGraph.addEdge(0, 1, 8);
+        kruskalGraph.addEdge(0, 2, 5);
+        kruskalGraph.addEdge(1, 2, 9);
+        kruskalGraph.addEdge(2, 3, 3);
+        kruskalGraph.addEdge(2, 4, 4);
+        kruskalGraph.addEdge(4, 5, 7);
+
+        KruskalAlgorithm[] mstKruskal = kruskalGraph.kruskal();
+        
+        kruskalGraph.printMST(mstKruskal);
     }
 }
