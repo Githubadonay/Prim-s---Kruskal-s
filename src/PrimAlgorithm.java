@@ -85,10 +85,11 @@ class Graph {
         }
 
         List<Edge> T = new ArrayList<>();
-        //create a loop, if Q is not empty 
-        //make the Q pick the min and once its used remove 
-        //This starts from V 0 it checks whos its connected to and picks the smalled edge to add
-        //once its done it checks for the next smalles until it addes all.
+        // create a loop, if Q is not empty
+        // make the Q pick the min and once its used remove
+        // This starts from V 0 it checks whos its connected to and picks the smalled
+        // edge to add
+        // once its done it checks for the next smalles until it addes all.
         while (!Q.isEmpty()) {
             pQEntry minEntry = Q.poll();
             int u = minEntry.vertex;
@@ -120,7 +121,6 @@ class Graph {
 
         return T;
     }
-    
 
     public void printMST(List<Edge> mst) {
         System.out.println("Minimum Spanning Tree:");

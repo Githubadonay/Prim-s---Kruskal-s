@@ -13,7 +13,7 @@ public class KruskalAlgorithm implements Comparable<KruskalAlgorithm> {
     public int compareTo(KruskalAlgorithm other) {
         return Integer.compare(this.weight, other.weight);
     }
-    
+
 }
 
 class UnionFind {
@@ -108,11 +108,11 @@ class KruskalGraph {
             int root1 = edge.startVertex;
             int root2 = edge.endVertex;
 
-            if(uf.union(root1, root2)) {
+            if (uf.union(root1, root2)) {
                 mstEdges[mstEdgeCount] = edge;
                 mstEdgeCount++;
 
-                if(mstEdgeCount == numVertices - 1) {
+                if (mstEdgeCount == numVertices - 1) {
                     break;
                 }
             }
@@ -125,7 +125,7 @@ class KruskalGraph {
         int totalWeight = 0;
         for (KruskalAlgorithm edge : mstEdges) {
             System.out.println("Edge:" + edge.startVertex + " - " + edge.endVertex +
-                " (Weight: " + edge.weight + ")");
+                    " (Weight: " + edge.weight + ")");
             totalWeight += edge.weight;
         }
         System.out.println("Total MST Weight:" + totalWeight);
