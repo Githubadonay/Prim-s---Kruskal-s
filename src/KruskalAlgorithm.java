@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class KruskalAlgorithm implements Comparable<KruskalAlgorithm> {
     int startVertex;
     int endVertex;
