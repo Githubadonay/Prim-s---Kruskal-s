@@ -27,7 +27,7 @@ public class Imp {
     }
 
     // run Prim time complexity
-    private static void runPrimWithTiming(int nVertex) {
+    private static void primTimeComplexity(int nVertex) {
         int edgesPerVertex = 2;
         Graph graphed = RandomGraph(nVertex, edgesPerVertex);
 
@@ -41,6 +41,7 @@ public class Imp {
     }
 
     public static void main(String[] args) {
+    //Prims
         Graph graph = new Graph(6);
 
         graph.addEdge(0, 1, 8);
@@ -55,10 +56,11 @@ public class Imp {
         graph.printMST(mstSmall);
 
         System.out.println("\nTiming Prim's Algorithm on larger graphs");
-        runPrimWithTiming(100);
-        runPrimWithTiming(1000);
-        runPrimWithTiming(10000);
-
+        primTimeComplexity(100);
+        primTimeComplexity(1000);
+        primTimeComplexity(10000);
+    
+//Kruskal
         System.out.println("\nKruskal's Algorithm:\n");
 
         KruskalGraph kruskalGraph = new KruskalGraph(6);
